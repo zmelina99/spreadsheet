@@ -1,5 +1,5 @@
 export interface ICell {
-  value: string;
+  id: string;
 }
 
 export interface IHeaderCell {

@@ -1,0 +1,21 @@
+.HeaderContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.HeaderContainer__Horizontal {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.SheetContainer__GridContainer {
+  display: flex;
+}
+.SheetContainer__Grid {
+  display: grid;
+  grid-template-columns: repeat(26, 10rem);
+  grid-gap: 0;
+  align-self: flex-start;
+}

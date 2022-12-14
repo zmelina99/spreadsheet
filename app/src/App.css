@@ -36,14 +36,5 @@
     transform: rotate(360deg);
   }
 }
-.grid {
-  display: grid;
-  grid-template-columns: repeat(26, 100px);
-  grid-gap: 0;
-  align-self: flex-start;
-}
 
-.grid > div {
-  border-right: 1px solid var(--border-color);
-  border-bottom: 1px solid var(--border-color);
-}
+

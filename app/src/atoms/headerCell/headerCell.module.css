@@ -1,9 +1,9 @@
 .CellContainer {
-  width: 1rem;
+  width: 10rem;
   border: 1px solid red;
 }
 .CellContainer--small {
-  width: 10rem;
+  width: 1rem;
 }
 
 .Cell__Value {

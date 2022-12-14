@@ -2,6 +2,7 @@ import './App.css';
 import Header from './molecules/header/header';
 import React from 'react';
 import Cell from './atoms/cell/cell';
+import Sheet from './organisms/sheet/sheet';
 
 const App: React.FC = () => {
   //columns
@@ -31,25 +32,17 @@ const App: React.FC = () => {
     0
   );
 
-  const grid: any[] = [];
-  for (let row = 0; row < alphabet.length; row++) {
-    grid.push([] as any);
-    for (let col = 0; col < 2; col++) {
-      grid[row].push(<Cell value={`${col}${row}`} />);
-    }
-  }
-
   console.log(sumWithInitial);
   return (
     <div className="App">
-      <Header headerValues={alphabet} orientation={'horizontal'} />
+      {/* <Header headerValues={alphabet} orientation={'horizontal'} />
       <Header headerValues={['1', '2']} orientation={'vertical'} />
-      {/* <div className="grid">
-        {alphabet.map((column) =>
-          ['1', '2'].map((row) => <Cell value={column + row} />)
+      <div className="grid">
+        {['1', '2'].map((row) =>
+          alphabet.map((column) => <Cell value={column + row} />)
         )}
       </div> */}
-      <div className="grid">{grid}</div>
+      <Sheet />
     </div>
   );
 };
