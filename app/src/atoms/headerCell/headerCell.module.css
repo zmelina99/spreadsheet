@@ -1,0 +1,10 @@
+.CellContainer {
+  width: 1rem;
+  border: 1px solid red;
+}
+.CellContainer--small {
+  width: 10rem;
+}
+
+.Cell__Value {
+}
