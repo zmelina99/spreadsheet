@@ -3,6 +3,7 @@ import Header from './molecules/header/header';
 import React from 'react';
 import Cell from './atoms/cell/cell';
 import Sheet from './organisms/sheet/sheet';
+import StoreProvider, { SheetsContext } from './provider/provider';
 
 const App: React.FC = () => {
   //columns
@@ -34,6 +35,7 @@ const App: React.FC = () => {
 
   console.log(sumWithInitial);
   return (
+    <StoreProvider>
     <div className="App">
       {/* <Header headerValues={alphabet} orientation={'horizontal'} />
       <Header headerValues={['1', '2']} orientation={'vertical'} />
@@ -44,6 +46,7 @@ const App: React.FC = () => {
       </div> */}
       <Sheet />
     </div>
+    </StoreProvider>
   );
 };
 
