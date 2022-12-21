@@ -10,7 +10,9 @@ import {
 
 type Reducer<S, A> = (state: S, action: A) => S;
 
-const storeInit: Store = {};
+const storeInit: Store = {
+  values: {},
+};
 
 export const SheetsContext = createContext<ContextValues>({
   store: storeInit,

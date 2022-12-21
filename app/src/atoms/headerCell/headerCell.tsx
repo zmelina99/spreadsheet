@@ -6,7 +6,7 @@ const Cell: React.FC<IHeaderCell> = ({ value, width= 'large' }) => {
   const { CellContainer, Cell__Value } = styles;
   console.log(width)
   return (
-    <div className={`${CellContainer} ${styles[`CellContainer__${width}`]}`}>
+    <div className={`${CellContainer} ${styles[`CellContainer--${width}`]}`}>
       <span className={Cell__Value}>{value}</span>
     </div>
   );

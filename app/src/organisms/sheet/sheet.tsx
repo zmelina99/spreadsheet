@@ -9,6 +9,9 @@ const Sheet: React.FC<ISheet> = () => {
     styles;
   const alpha = Array.from(Array(26)).map((e, i) => i + 65);
   const alphabet = alpha.map((x) => String.fromCharCode(x));
+  const numbers = Array.from(Array(100).keys())
+numbers.shift()
+  console.log(numbers, 'num')
   return (
     <div className={SheetContainer}>
       <div className={SheetContainer__Header}>
@@ -16,9 +19,9 @@ const Sheet: React.FC<ISheet> = () => {
       </div>
       <div className={SheetContainer__GridContainer}>
         {' '}
-        <Header headerValues={['1', '2', '3', '4']} orientation="vertical" />
+        <Header headerValues={numbers} orientation="vertical" />
         <div className={SheetContainer__Grid}>
-          {['1', '2', '3', '4'].map((row) =>
+          {numbers.map((row) =>
             alphabet.map((column) => <Cell id={column + row} />)
           )}
         </div>

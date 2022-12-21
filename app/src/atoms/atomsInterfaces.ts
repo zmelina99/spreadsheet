@@ -3,6 +3,6 @@ export interface ICell {
 }
 
 export interface IHeaderCell {
-  value: string;
+  value: string | number;
   width: 'small' | 'large';
 }

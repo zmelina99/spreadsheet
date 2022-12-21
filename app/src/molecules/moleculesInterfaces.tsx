@@ -1,4 +1,4 @@
 export interface IHeader {
-  headerValues: string[];
+  headerValues: string[] | number[];
   orientation: 'horizontal' | 'vertical';
 }

@@ -11,8 +11,11 @@ type ActionMap<M extends { [index: string]: any }> = {
       };
 };
 
+export interface IValuesDictionary {
+  [key: string]: Record<string, number>;
+}
 export interface IValues {
-  [key: string]: Record<string, string>;
+  values: IValuesDictionary;
 }
 export type Store = IValues;
 
@@ -27,7 +30,7 @@ export interface Action {
 
 export type StoragePayload = {
   [Types.generateOperation]: {
-    value: string;
+    value: number;
     id: string;
   };
 };

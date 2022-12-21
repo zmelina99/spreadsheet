@@ -1,9 +1,10 @@
 .CellContainer {
-  width: 10rem;
-  border: 1px solid red;
+  min-width: 100px;
+  border: 1px solid #D3DEDC;
+  background-color: #FFEFEF;
 }
 .CellContainer--small {
-  width: 1rem;
+  min-width: 2rem;
 }
 
 .Cell__Value {
