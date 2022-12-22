@@ -1,0 +1,16 @@
+.OptionsDropdownContainer {
+  background-color: white;
+  display: flex;
+  border: .5px solid grey;
+  border-radius: 8px;
+  z-index: 1000;
+}
+.OptionsDropdownContainer__Option {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50px;
+  margin: 0.25rem;
+}
+.OptionsDropdownContainer__Option:hover {
+  cursor: pointer;
+}

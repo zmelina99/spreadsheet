@@ -3,20 +3,25 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
+  position: sticky;
+  top: 0;
 }
 .SheetContainer__Header {
   padding-left: 2.1rem;
+  position: sticky;
+  top: 0;
 }
 .HeaderContainer__Horizontal {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
+  position: sticky;
+  left: 0;
 }
 .SheetContainer__GridContainer {
   display: flex;
 }
-
 .SheetContainer__Grid {
   display: grid;
   grid-template-columns: repeat(26, 100px);

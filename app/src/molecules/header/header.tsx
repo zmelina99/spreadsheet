@@ -18,6 +18,7 @@ const Header: React.FC<IHeader> = ({
         <HeaderCell
           value={value}
           width={orientation === 'vertical' ? 'small' : 'large'}
+          key={value}
         />
       ))}
     </div>

@@ -12,6 +12,8 @@ type Reducer<S, A> = (state: S, action: A) => S;
 
 const storeInit: Store = {
   values: {},
+  selectedCell: '',
+  currentCell: '',
 };
 
 export const SheetsContext = createContext<ContextValues>({
@@ -25,7 +27,6 @@ const StoreProvider: React.FC<Props> = ({ children }) => {
     storeInit
   );
   return (
-    // eslint-disable-next-line react/jsx-no-constructed-context-values
     <SheetsContext.Provider value={{ store, setStore: dispatch }}>
       {children}
     </SheetsContext.Provider>

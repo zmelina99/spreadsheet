@@ -1,11 +1,15 @@
 .HeaderContainer {
-    display: grid;
-    grid-row: auto;
-    grid-gap: 0;
-  }
+  display: grid;
+  grid-row: auto;
+  grid-gap: 0;
+  position: sticky;
+  left: 0;
+}
 
 .HeaderContainer__Horizontal {
   display: grid;
   grid-template-columns: repeat(26, 100px);
   grid-gap: 0;
+  position: sticky;
+  top: 0;
 }

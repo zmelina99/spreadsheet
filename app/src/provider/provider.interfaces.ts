@@ -12,15 +12,21 @@ type ActionMap<M extends { [index: string]: any }> = {
 };
 
 export interface IValuesDictionary {
-  [key: string]: Record<string, number>;
+  [key: string]: Record<string, string>;
 }
 export interface IValues {
   values: IValuesDictionary;
+  selectedCell: string;
+  currentCell: string;
 }
 export type Store = IValues;
 
 export enum Types {
   generateOperation = 'GENERATE_OPERATION',
+  setSelectedCell = 'SET_SELECTED_CELL',
+  setCurrentCell = 'SET_CURRENT_CELL',
+  changeBgColor = 'CHANGE_BG_COLOR',
+  changeFontColor = 'CHANGE_FONT_COLOR',
 }
 
 export interface Action {
@@ -30,7 +36,21 @@ export interface Action {
 
 export type StoragePayload = {
   [Types.generateOperation]: {
-    value: number;
+    value: string;
+    id: string;
+  };
+  [Types.setSelectedCell]: {
+    value: string;
+  };
+  [Types.setCurrentCell]: {
+    value: string;
+  };
+  [Types.changeBgColor]: {
+    value: string;
+    id: string;
+  };
+  [Types.changeFontColor]: {
+    value: string;
     id: string;
   };
 };

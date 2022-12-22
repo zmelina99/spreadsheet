@@ -1,0 +1,24 @@
+.ActionsHeader__Container {
+  padding: 1rem;
+  display: flex;
+}
+.ActionsHeader__Title {
+  margin: 0.5rem;
+  outline: none;
+}
+.ActionsHeader__Button {
+  position: relative;
+  border-radius: 8px;
+  background-color: white;
+  border: 1px solid grey;
+  padding: 1rem;
+  margin: 0.5rem;
+}
+.ActionsHeader__Button:hover {
+  cursor: pointer;
+}
+.ActionsHeader__DropdownContainer{
+  position: absolute;
+  top: 50px;
+  z-index: 10000;
+}
