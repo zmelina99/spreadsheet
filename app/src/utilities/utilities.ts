@@ -5,6 +5,7 @@ export const processString = (str: string, store: Store) => {
   let number = '';
   let i = 0;
   let storeValue = '';
+  let storeIndex = 0;
 
   if (str.match(/[^a-zA-Z0-9+-]/)) return 'Error';
 
@@ -64,8 +65,17 @@ export const processString = (str: string, store: Store) => {
     //Save the number in the store variable
     else if (!isNaN(parseInt(current)) && storeValue.length) {
       storeValue = storeValue + str[i];
-      //If it is the last element of the string, perform the operation with the solution
+      // If it is the last element of the string, perform the operation with the solution
       if (
+        storeValue.length &&
+        str[storeIndex - 1] === '-' &&
+        isNaN(parseInt(str[i + 1])) &&
+        store.values[storeValue.toUpperCase()].value
+      ) {
+        solution =
+          solution - Number(store.values[storeValue.toUpperCase()].value);
+        storeValue = '';
+      } else if (
         i === str.length - 1 &&
         store?.values[storeValue.toUpperCase()]?.value?.length
       ) {
@@ -75,9 +85,10 @@ export const processString = (str: string, store: Store) => {
     //If current is a letter, add it to the store value variable
     if (current.match(/[a-z]/)) {
       storeValue = storeValue + current.toUpperCase();
+      storeIndex = i;
     }
 
-    //If current is an operator and the is a store value
+    //If current is an operator and there is a store value
     //perform the operation
     if ((current === '+' || current === '-') && storeValue.length) {
       if (store?.values[current]?.value?.length) {

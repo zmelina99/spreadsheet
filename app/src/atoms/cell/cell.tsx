@@ -59,9 +59,9 @@ const Cell: React.FC<ICell> = ({ id, setSelectedCell, selectedCell }) => {
     });
   };
 
-  useEffect(() => {
-    setSelectedCell(selectedCell);
-  }, [selectedCell, setSelectedCell]);
+  // useEffect(() => {
+  //   setSelectedCell(selectedCell);
+  // }, [selectedCell, setSelectedCell]);
 
   return (
     <div
